@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/assets/style.css" />
+  <link rel="shortcut icon" href="/assets/images/favicon.png" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans" />
+  <title>{% if page.index == null %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  {% if page.scripts != null %} {% for script in page.scripts %}
+  <script src="{{ script }}"></script>
+  {% endfor %} {% endif %}
+  <script src="/assets/scripts/analytics.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>{{ site.title }}</h1>
+  </header>
+  <main>
+    <nav>
+      {% for section in site.menu %}
+      <section>
+        <h2>{{ section.header }}</h2>
+        <ul>
+          {% for link in section.links %}
+          <li>
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endfor %}
+    </nav>
+    <div id="body">
+      {% if page.noPageTitle == null %}
+      <h2>{{ page.title }}</h2>{% endif %} {{ content }}
+    </div>
+    <div class="clearfix"></div>
+  </main>
+</body>
+
+</html>

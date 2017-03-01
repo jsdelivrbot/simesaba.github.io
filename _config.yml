@@ -1,0 +1,60 @@
+auto: true
+server: true
+markdown: redcarpet
+redcarpet:
+  extensions:
+  - autolink
+  - strikethrough
+  - no_intra_emphasis
+  - fenced_code_blocks
+  - autolink
+  - tables
+
+compress_html:
+  clippings: all
+  comments:  ["<!-- ", " -->"]
+  endings:   all
+
+collections:
+  docs:
+    output: true
+  gamedata:
+    output: true
+
+title: しめ鯖公式サイト
+
+menu:
+- header: ドキュメント
+  links:
+  - title: トップページ
+    url: /
+  - title: ゲームルール
+    url: /docs/rules
+  - title: コマンド一覧
+    url: /docs/cmds
+  - title: 仕様
+    url: /docs/spec
+  - title: 保護
+    url: /docs/protection
+  - title: 職業
+    url: /docs/jobs
+  - title: QuickShop
+    url: /docs/qs
+  - title: 投票
+    url: /docs/vote
+  - title: PVP
+    url: /docs/pvp
+  - title: お問い合わせへの返答
+    url: /docs/q-and-a
+  - title: イベント
+    url: /docs/events
+- header: ゲームデータ
+  links:
+  - title: 最近のプレイヤー一覧
+    url: /gamedata/recent-players
+  - title: 所持金ランキング
+    url: /gamedata/money-top
+  - title: PVPレートランキング
+    url: /gamedata/pvp-top
+  - title: 処罰履歴
+    url: /gamedata/punishments
